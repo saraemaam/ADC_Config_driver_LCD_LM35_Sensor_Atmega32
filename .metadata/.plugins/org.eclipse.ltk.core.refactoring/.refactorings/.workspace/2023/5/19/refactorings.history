@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ADC_driver_LCD_Temp_interrupt_based&apos; to &apos;ADC_Config_driver_LCD_LM35_test&apos;" description="Rename resource &apos;ADC_driver_LCD_Temp_interrupt_based&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ADC_driver_LCD_Temp_interrupt_based" name="ADC_Config_driver_LCD_LM35_test" stamp="1683485577869" updateReferences="true"/>
+</session>

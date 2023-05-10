@@ -1,0 +1,58 @@
+20:51:14 **** Incremental Build of configuration Debug for project ADC_driver_LCD_Temp_interrupt_based ****
+make all 
+Building file: ../application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"application.d" -MT"application.o" -c -o "application.o" "../application.c"
+../application.c: In function 'main':
+../application.c:25: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../application.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_displayStringRowColumn':
+../lcd.c:234: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:247: warning: implicit declaration of function 'itoa'
+../lcd.c:249: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../lcd.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building target: ADC_driver_LCD_Temp_interrupt_based.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_driver_LCD_Temp_interrupt_based.map -mmcu=atmega32 -o "ADC_driver_LCD_Temp_interrupt_based.elf"  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./adc.o ./application.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: ADC_driver_LCD_Temp_interrupt_based.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_driver_LCD_Temp_interrupt_based.elf  >"ADC_driver_LCD_Temp_interrupt_based.lss"
+Finished building: ADC_driver_LCD_Temp_interrupt_based.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_driver_LCD_Temp_interrupt_based.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9344 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:51:15 Build Finished. 0 errors, 5 warnings. (took 816ms)
+
